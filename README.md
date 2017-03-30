@@ -5,41 +5,40 @@ Base de datos sencilla basada en objetos y almacenada en objetos json
 # Inicializacion
 
 
-Espesificar ruta donde se almacenaran las bases de datos
 
+Especificar ruta donde se almacenaran las bases de datos
 
-var bd = new chicle("./");
+    var bd = new chicle("./");
 
 
 # conexion
 
-Conectar con tabla de base de datos  si no existe se crea, si hay error devulve true
+Conectar con tabla de base de datos si no existe se crea, si hay error devuelve true.
 
 
-bd.conectar("juan",function(error)){
+    bd.conectar("juan",function(error)){
 
-	console.log(error);
+ 	console.log(error);
 	if(error != true){
 		//codigo de ejecucion
 
 	}
-}
+    }
 
 # Agregar datos
- agregar datos llava primaria ID siempre activa si se le da un valor 
- se reconfugura a la sumatoria real de la llave primaria
+ agregar datos llave primaria ID siempre activa si se le da un valor 
+ se re configurara  la sumatoria real de la llave primaria
 
 
+     bd.conectar("juan",function(error)){
 
-bd.conectar("juan",function(error)){
-
-	console.log(error);
-	if(error != true){
-		//codigo de ejecucion
+	 console.log(error);
+	 if(error != true){
+	 	//codigo de ejecucion
 		bd.agregar({"id":"10","nombre":"juan","apellido":"flores"});
 
-	}
-}
+	 }
+       }
 
 
 El resultado en base de datos seria  
@@ -49,7 +48,7 @@ El resultado en base de datos seria
 # Consulta de datos
 
 
-bd.conectar("juan",function(error)){
+    bd.conectar("juan",function(error)){
 
 	console.log(error);
 	if(error != true){
@@ -66,6 +65,6 @@ bd.conectar("juan",function(error)){
 		});
 
 	}
-}
+    }
 
 
