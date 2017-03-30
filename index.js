@@ -155,36 +155,4 @@ function chicle(directorio){
 	}
 }
 
-
-var bd  = new chicle('./bd');
-
-
-bd.conectar("Juan",function(error,info){
-	/*
-	bd.consulta(function(data){
-		//console.log(data);
-	});
-	*/
-	console.time("a");
-	
-	setInterval(function(){
-			bd.agregar({"id":"10","nombre":"juan"},function(eror){
-		
-				//console.log(error);
-		
-			});
-		
-	
-	},10);
-
-
-
-	console.timeEnd("a");
-});
-
-
-
-
-
-
-
+module.exports = chicle();
